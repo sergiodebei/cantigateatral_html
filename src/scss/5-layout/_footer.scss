@@ -1,0 +1,14 @@
+footer{
+    height: 5.5rem;
+    background-color: $black;
+    .in{
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-around;
+        color: $white;
+        font-size: 13px;
+        a{
+            color: $white;
+        }
+    }
+}

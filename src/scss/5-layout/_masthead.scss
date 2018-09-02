@@ -1,0 +1,132 @@
+// header{
+//     height: 100vh;
+//     background: url(../img/cantiga_teatral.jpg) no-repeat center right;
+//     background-size: cover;
+// }
+
+header{
+    // position: fixed;
+    width: 100%;
+    background-color: $white;
+    z-index: 10;
+    .header_inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5.5rem;
+        .logo{
+            // font-family: $fontFamily-oswald;
+            // font-size: 2rem;
+            // font-weight: bold;
+            // text-transform: uppercase;
+            // color: $white;
+            // line-height: 20px;
+            // letter-spacing: 2px;
+            // text-align: center;
+            img{
+                height: 45px;
+            }
+        }
+        nav{
+            .menu{
+                display: flex;
+                justify-content: flex-end; 
+                
+                text-transform: uppercase; 
+                li{
+                    padding: 10px;
+                    display: inline-block;
+                    @include transition (.3s);
+                    a{
+                        font-size: 14px;
+                        padding: 10px;
+                        color: $black;
+                        font-weight: 500;
+                        @include transition (.3s);
+                    }
+                    &.active, &:hover, &:focus{
+                        a{
+                            color: $grey-light;
+                        }
+                    }
+                    &:last-child{
+                        padding-right: 0; 
+                    }
+                }
+            }
+        }
+        .hamburger-menu{
+            display: none;
+        }
+    }
+
+}
+
+// @media only screen and (max-width: 767px) {
+
+//     header{
+//         .header_inner{
+//             nav{
+//                 background: grey;
+//                 display: block;
+//                 position: fixed;
+//                 overflow-y: auto;
+//                 overflow-x: hidden;
+//                 box-shadow:inset 1px 1px 5px 0 rgba(0,0,0,.45);
+//                 &.from_left_effect{
+//                     width: 200px;
+//                     height: 100%;
+//                     left: -200px;
+//                     top: 68px;  
+//                     -webkit-transition: left 0.25s ease;
+//                     -moz-transition: left 0.25s ease;
+//                     -ms-transition: left 0.25s ease;
+//                     -o-transition: left 0.25s ease;
+//                     transition: left 0.25s ease;
+//                     &.visible {
+//                         left: 0px;
+//                         -webkit-transition: left 0.25s ease;
+//                         -moz-transition: left 0.25s ease;
+//                         -ms-transition: left 0.25s ease;
+//                         -o-transition: left 0.25s ease;
+//                         transition: left 0.25s ease;               
+//                     }
+//                 }
+//                 &.from_top_effect{
+//                     top: -200px; 
+//                     -webkit-transition: top 0.25s ease;
+//                     -moz-transition: top 0.25s ease;
+//                     -ms-transition: top 0.25s ease;
+//                     -o-transition: top 0.25s ease;
+//                     transition: top 0.25s ease;
+//                     width: calc(100% - 20px); 
+//                     &.visible {
+//                         top: 68px;
+//                         -webkit-transition: top 0.25s ease;
+//                         -moz-transition: top 0.25s ease;
+//                         -ms-transition: top 0.25s ease;
+//                         -o-transition: top 0.25s ease;
+//                         transition: top 0.25s ease;       
+//                     }
+//                 }
+
+//                  .menu{
+//                     flex-direction: column;
+//                     margin-top: 10px;
+//                      li{
+//                          padding: 0;
+//                          a{
+//                              width: 100%;
+//                              display: flex;
+//                              padding: 20px; 
+//                          }
+//                      }
+//                  }
+//             }
+//             .hamburger-menu{
+//                 display: block;
+//             }
+//         }
+//     }
+  
+// }
