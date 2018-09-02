@@ -58,7 +58,7 @@ $grid-spacing:3%;
 .col-11 { width:(100% / 1.090909090909091) - ($grid-spacing * 1 / 12); }
 .col-12 { width:100%; }
 
-$container-width: 1100;
+$container-width: 900;
 
 .container {
   max-width: $container-width + px;
