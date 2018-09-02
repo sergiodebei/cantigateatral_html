@@ -1,0 +1,14 @@
+.hero{
+    position: relative;
+    &__logo{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        margin: 0 auto;
+        max-width: 900px;
+        img{
+            max-width: 50%;
+        }
+    }
+}
