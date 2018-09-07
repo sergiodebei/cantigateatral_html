@@ -60,7 +60,7 @@ $grid-spacing:3%;
 
 $container-width: 900;
 
-.container {
+.container, .cb {
   max-width: $container-width + px;
   margin: 0 auto;
 }
