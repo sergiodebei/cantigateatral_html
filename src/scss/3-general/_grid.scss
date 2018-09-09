@@ -61,6 +61,11 @@ $grid-spacing:3%;
 $container-width: 900;
 
 .container, .cb {
-  max-width: $container-width + px;
-  margin: 0 auto;
+	max-width: $container-width + px;
+	margin: 0 auto;
+  	@media only screen and (max-width: 1000px) {
+		// .container, .cb{
+			margin: 0 20px;
+		// }
+	}
 }
