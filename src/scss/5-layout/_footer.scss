@@ -9,6 +9,10 @@ footer{
         font-size: 13px;
         a{
             color: $white;
+            &:hover{
+                @include transition (.3s);
+                color: #aff4d5;
+            }
         }
     }
 }
