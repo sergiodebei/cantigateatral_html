@@ -77,3 +77,28 @@ h3{
         // }
     }
 }
+
+hr{
+    border: none;
+    position: relative;  
+    margin: 4rem 0;
+    height: 20px;
+    &:after{
+        content: "";
+        display: block;
+        height: 20px;
+        margin: 10px auto;
+        top: -11px;
+        left: 0;
+        right: 0;
+        background: -webkit-linear-gradient(135deg, #dedede 12px, transparent 0) 0 12px, -webkit-linear-gradient(45deg, #f0f0f0 12px, transparent 0) 0 12px;
+        background: -o-linear-gradient(135deg, #dedede 12px, transparent 0) 0 12px, -o-linear-gradient(45deg, #f0f0f0 12px, transparent 0) 0 12px;
+        background: linear-gradient(-45deg, #dedede 12px, transparent 0) 0 12px, linear-gradient(45deg, #f0f0f0 12px, transparent 0) 0 12px;
+        background-position: center center;
+        background-repeat: repeat-x;
+        background-size: 20px 20px;
+        width: 50%;
+        max-width: 600px;
+        margin: auto;
+    }
+}
