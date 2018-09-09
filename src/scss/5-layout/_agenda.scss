@@ -1,9 +1,9 @@
 #agenda{
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto;
     .agenda__group{
         .event{
-            border-top: 8px solid #eaeaea;
+            border-top: 4px solid #f0f0f0;
             box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
             @include transition(.3s);
             display: flex;
@@ -35,9 +35,9 @@
             & + .event{
                 margin-top: 20px;
             }
-            &:hover{
-                box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-            }
+            // &:hover{
+            //     box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+            // }
         }
     }
 }
