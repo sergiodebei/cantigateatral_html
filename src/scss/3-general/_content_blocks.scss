@@ -1,20 +1,38 @@
 .cb {
     margin-top: 4rem !important;
+    &--reverse{
+        .row{
+            display: flex;
+            flex-direction: row-reverse;
+            [class^=col-] {
+                margin-right: 0;
+            }
+            [class^=col-]:last-child {
+                margin-right: 3%;
+            }
+        }
+    }
+    &--columns{
+        .title{
+            margin-bottom: 1rem;
+        }
+    }
     &--fullwidth{
         max-width: 100% !important;
     }
-    &--video{
-        .video-holder {
-            position: relative;
+    &--fullvideo{
+
+    }
+    .video-holder {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.65%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding-bottom: 56.65%;
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
+            height: 100%;
         }
     }
 }
