@@ -65,7 +65,21 @@ $container-width: 900;
 	margin: 0 auto;
   	@media only screen and (max-width: 1000px) {
 		// .container, .cb{
-			margin: 0 2rem;;
+			margin: 0 2rem;
 		// }
 	}
 }
+
+@media only screen and (max-width: 700px) {
+	.row{
+		flex-wrap: wrap;
+	}
+	.col-s-12{
+		width: 100%;
+		margin: 0;
+		& + .col-s-12{
+			margin-top:2rem;
+		}
+	}
+}
+
