@@ -16,6 +16,9 @@
         .title{
             margin-bottom: 1rem;
         }
+        .button{
+            margin-top: 2rem;
+        }
     }
     &--fullwidth{
         max-width: 100% !important;
@@ -33,6 +36,22 @@
             left: 0;
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .cb {
+        &--reverse{
+            .row{
+                [class^=col-]:last-child {
+                    margin-right: 0;
+                    margin-top:2rem;
+                }
+            }
+        }
+        &--fullwidth{
+            margin: 4rem 0 0 !important;
         }
     }
 }
