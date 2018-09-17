@@ -13,13 +13,15 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         
         <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- {# <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> #} -->
         <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
         <link rel="stylesheet" type="text/css" href="./assets/css/cantigateatral-main.css">
         <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script> -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js "></script> -->
         <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-        <script type="text/javascript" src="./assets/js/cantigateatral-main.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bigpicture@1.5.1/dist/BigPicture.min.js"></script> -->
+        <script type="text/javascript" src="./assets/js/cantigateatral-main.js"></script> 
+        
     </head>
     <body class="page-single">
         <!--[if lt IE 8]>
@@ -180,7 +182,7 @@
             <div class="cb cb--columns cb--reverse">
                 <div class="row">
                     <div class="col-6 col-s-12">
-                        <img src="./assets/img/cantiga_teatral2.jpg">
+                        <img src="./assets/img/cantiga_teatral2.jpg" />
                     </div>
                     <div class="col-6 col-s-12">
                         <h4 class="title">Title</h4>
@@ -206,7 +208,8 @@
             </div>
 
             <div class="cb cb--fullwidth">
-                <img src="./assets/img/cantiga_teatral2.jpg" alt="">
+                <img class="lazy" data-original="./assets/img/cantiga_teatral2.jpg" alt="alt" />
+                <noscript><img src="./assets/img/cantiga_teatral2.jpg" alt="alt" /></noscript>
             </div>
 
             <div class="cb cb--fullvideo">
