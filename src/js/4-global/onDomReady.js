@@ -15,5 +15,87 @@ $(document).on("ready", function () {
             header.removeClass("darkHeader");
         }
     });
+
+    // SLIDER
+    slider = $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 6000000,
+        dots: false,
+        arrows: false,
+        rows: 0,
+    });
+
+    // $('.next-button-slick').click(function() {
+    //     $('.slider').slickNext();
+    // });
+    // $('.prev-button-slick').click(function() {
+    //     $('.slider').slickPrev();
+    // });
+
+    // INIT
+    // if ($('body').hasClass('home')) initHome();
+
+    // INIT LAZYLOAD
+    // $('img.lazy').lazyload({
+    //     threshold: '100%',
+    //     effect: 'fadeIn',
+    //     // load: resize,
+    //     placeholder: ''
+    // });
+
+    // $( ".popup" ).click(function(e) {
+
+    //     e.target.tagName === 'IMG' && BigPicture({
+    //         el: e.target
+    //     });
+
+    //     // console.log('mytest >',e.target);
+
+    //     ~e.target.className.indexOf('htmlvid') && BigPicture({
+    //         el: e.target,
+    //         vidSrc: e.target.getAttribute('vidSrc')
+    //     });
+
+    //     ~e.target.className.indexOf('vimeo') && BigPicture({
+    //         el: e.target,
+    //         vimeoSrc: e.target.getAttribute('vimeoSrc')
+    //     });
+
+    //     ~e.target.className.indexOf('youtube') && BigPicture({
+    //         el: e.target,
+    //         ytSrc: e.target.getAttribute('ytSrc')
+    //     });
+
+    // });
+
+    var container_7_1 = document.querySelector("#psgal_7_1");
+var msnry;
+
+// initialize  after all images have loaded
+imagesLoaded(container_7_1, function() {
+  // initialize Masonry after all images have loaded
+  new Masonry(container_7_1, {
+    // options...
+    itemSelector: ".msnry_item",
+    //columnWidth: 150,
+    isFitWidth: true
+  });
+
+  container_7_1.className += " photoswipe_showme";
 });
+var totalWidth = 0;
+var totalHeight = 0;
+
+
+$(".psgal figure img").each(function( index ) {
+  
+      totalWidth = $(this).clientWidth;
+        totalHeight = $(this).clientHeight;
+
+  //$(this).parent().attr("data-size",totalWidth +"x"+totalHeight)
+});
+
+// alert(totalWidth);
+});
+
 
