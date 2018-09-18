@@ -1,44 +1,43 @@
 /* PhotoSwipe Plugin */
 .psgal {
-  margin: auto;
-  padding-bottom: 40px;
-  transition: all 0.4s ease;
-  // min-height: 400px
-  opacity: 0.1;
+    margin: auto;
+    padding-bottom: 40px;
+    transition: all 0.4s ease;
+    opacity: 0.1;
+    &.photoswipe_showme {
+        opacity: 1;
+    }
+    figure{
+        float: left;
+        text-align: center;
+        width: 150px;
+        padding: 5px;
+        margin: 0px;
+        box-sizing: border-box;
+        figcaption {
+            font-size: 13px;
+        }
+    }
+    a {
+        display: block;
+    }
+    img {
+        margin: auto;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border: 0;
+    }
 }
 
-.psgal.photoswipe_showme {
-  opacity: 1;
-}
+// .msnry {
+//   margin: auto;
+// }
 
-.psgal figure {
-  float: left;
-
-  text-align: center;
-  width: 150px;
-
-  padding: 5px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-.psgal a {
-  display: block;
-}
-
-.psgal img {
-  margin: auto;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  border: 0;
-}
-.psgal figure figcaption {
-  font-size: 13px;
-}
-
-.msnry {
-  margin: auto;
-}
-.pswp__caption__center {
-  text-align: center;
+.pswp{
+    &__caption{
+        &__center {
+            text-align: center;
+        }
+    }
 }
