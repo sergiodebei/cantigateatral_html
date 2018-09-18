@@ -16,24 +16,57 @@ $(document).on("ready", function () {
         }
     });
 
-    // SLIDER
-    slider = $('.slider').slick({
-        autoplay: true,
-        autoplaySpeed: 6000000,
-        dots: false,
-        arrows: false,
-        rows: 0,
-    });
 
-    // $('.next-button-slick').click(function() {
-    //     $('.slider').slickNext();
-    // });
-    // $('.prev-button-slick').click(function() {
-    //     $('.slider').slickPrev();
-    // });
+    function initSlider(){
+        console.log('page-single');
+        console.log('init-slider');
+        // SLIDER
+        slider = $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 6000000,
+            dots: false,
+            arrows: false,
+            rows: 0,
+        });
+
+        $('.next').click(function() {
+            $('.slider').slick("slickNext");
+        });
+        $('.prev').click(function() {
+            $('.slider').slick("slickPrev");
+        });
+
+        var container_7_1 = document.querySelector("#psgal_7_1");
+        var msnry;
+        
+        // initialize  after all images have loaded
+        imagesLoaded(container_7_1, function() {
+          // initialize Masonry after all images have loaded
+          new Masonry(container_7_1, {
+            // options...
+            itemSelector: ".msnry_item",
+            //columnWidth: 150,
+            isFitWidth: true
+          });
+        
+          container_7_1.className += " photoswipe_showme";
+        });
+        var totalWidth = 0;
+        var totalHeight = 0;
+        
+        
+        $(".psgal figure img").each(function( index ) {
+          
+              totalWidth = $(this).clientWidth;
+                totalHeight = $(this).clientHeight;
+        
+          //$(this).parent().attr("data-size",totalWidth +"x"+totalHeight)
+        });
+    }
 
     // INIT
     // if ($('body').hasClass('home')) initHome();
+    if ($('body').hasClass('page-single')) initSlider();
 
     // INIT LAZYLOAD
     // $('img.lazy').lazyload({
@@ -68,32 +101,7 @@ $(document).on("ready", function () {
 
     // });
 
-    var container_7_1 = document.querySelector("#psgal_7_1");
-var msnry;
 
-// initialize  after all images have loaded
-imagesLoaded(container_7_1, function() {
-  // initialize Masonry after all images have loaded
-  new Masonry(container_7_1, {
-    // options...
-    itemSelector: ".msnry_item",
-    //columnWidth: 150,
-    isFitWidth: true
-  });
-
-  container_7_1.className += " photoswipe_showme";
-});
-var totalWidth = 0;
-var totalHeight = 0;
-
-
-$(".psgal figure img").each(function( index ) {
-  
-      totalWidth = $(this).clientWidth;
-        totalHeight = $(this).clientHeight;
-
-  //$(this).parent().attr("data-size",totalWidth +"x"+totalHeight)
-});
 
 // alert(totalWidth);
 });
