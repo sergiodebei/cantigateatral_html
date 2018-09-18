@@ -5,17 +5,16 @@ $(document).on("ready", function () {
         $('nav').toggleClass('open');
 	});
 
-	var header = $("header");
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+	// var header = $("header");
+    // $(window).scroll(function() {
+    //     var scroll = $(window).scrollTop();
 
-        if (scroll >= 300) {
-            header.addClass("darkHeader");
-        } else {
-            header.removeClass("darkHeader");
-        }
-    });
-
+    //     if (scroll >= 300) {
+    //         header.addClass("darkHeader");
+    //     } else {
+    //         header.removeClass("darkHeader");
+    //     }
+    // });
 
     function initSlider(){
         console.log('page-single');
@@ -35,38 +34,38 @@ $(document).on("ready", function () {
         $('.prev').click(function() {
             $('.slider').slick("slickPrev");
         });
+    }
 
-        var container_7_1 = document.querySelector("#psgal_7_1");
-        var msnry;
-        
+    function initPhotoSwipeGallery(){
+        var $psgal = $('.psgal')
+        // var container_7_1 = document.querySelector(".psgal");
+
         // initialize  after all images have loaded
-        imagesLoaded(container_7_1, function() {
-          // initialize Masonry after all images have loaded
-          new Masonry(container_7_1, {
-            // options...
-            itemSelector: ".msnry_item",
-            //columnWidth: 150,
-            isFitWidth: true
-          });
-        
-          container_7_1.className += " photoswipe_showme";
+        $psgal.imagesLoaded( function(){
+            // initialize Masonry after all images have loaded
+            var msnry = new Masonry( $psgal[0], {
+                // options...
+                itemSelector: ".msnry_item",
+                //columnWidth: 150,
+                isFitWidth: true
+            });
+            $psgal.addClass("photoswipe_showme");
         });
+        
         var totalWidth = 0;
         var totalHeight = 0;
         
-        
         $(".psgal figure img").each(function( index ) {
-          
-              totalWidth = $(this).clientWidth;
-                totalHeight = $(this).clientHeight;
-        
-          //$(this).parent().attr("data-size",totalWidth +"x"+totalHeight)
+            totalWidth = $(this).clientWidth;
+            totalHeight = $(this).clientHeight;
+            //$(this).parent().attr("data-size",totalWidth +"x"+totalHeight)
         });
     }
 
     // INIT
     // if ($('body').hasClass('home')) initHome();
     if ($('body').hasClass('page-single')) initSlider();
+    if ($('body').hasClass('page-single')) initPhotoSwipeGallery();
 
     // INIT LAZYLOAD
     // $('img.lazy').lazyload({
